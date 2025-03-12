@@ -8,3 +8,40 @@
 body{
     font-family: "Outfit", sans-serif;
 }
+
+.active {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.active::after {
+    content: '';
+    width: 50%;
+    height: 1.5px;
+    background: #2F80ED;
+    position: absolute;
+    bottom: -2px; 
+    border-radius: 2px;
+}
+
+.active2{
+    background-color: #2F80ED;
+    color: white;
+    padding: 4px 16px;
+    border-radius: 5px;
+}
+
+.heading{
+    font-size: 32px;
+    color: black;
+    text-align: center;
+}
+
+.sub_heading{
+    font-size: 14px;
+    text-align: center;
+    justify-self: center;
+    margin-top: 6px;
+    color: #4f525a;
+}
