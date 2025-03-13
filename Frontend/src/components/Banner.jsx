@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import appointment_img from "../assets/assets_frontend/appointment_img.png"
 
 const Banner = () => {
@@ -11,7 +12,9 @@ const Banner = () => {
 
                 <div className="inline-flex flex-col w-full md:w-[50%] md:pl-20 items-center md:items-start">
                     <p className='font-semibold text-white text-4xl lg:text-5xl text-center md:text-start'>Book Appointment With 100+ Trusted Doctors</p>
-                    <button className='mt-8 bg-white text-zinc-600 px-8 py-3 rounded-full'>Create account</button>
+                    <Link to={"/Auth"}>
+                      <button className='mt-8 bg-white text-zinc-600 px-8 py-3 rounded-full'>Create account</button>
+                    </Link>
                 </div>
 
                 <div className="img absolute right-0 justify-center bottom-0 w-[50%] hidden md:flex">

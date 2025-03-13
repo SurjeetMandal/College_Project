@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { specialityData } from "../assets/assets_frontend/assets.js"
+import { DoctorContext } from '../context/DoctorContext.jsx'
+import { Link } from 'react-router-dom'
 
 const Specility = () => {
+
+  const { setSpecialist } = useContext(DoctorContext)
+  
+  function HandleSpecilist (DoctorSpecility) {
+    setSpecialist(DoctorSpecility)
+  }
+
   return (
     <div>
       <div className='max-w-[1440px] mx-auto px-4 md:px-10 lg:px-20'>
@@ -19,10 +28,12 @@ const Specility = () => {
             { 
                 specialityData.map((items, index) => (
                     <div key={index}>
-                         <div className='flex flex-col justify-center items-center'>
-                            <img src={items.image} width={100} alt="" />
-                            <p className='text-xs mt-2'>{items.speciality}</p>
-                         </div>
+                        <Link to={"/AllDoc"}>
+                          <div className='flex flex-col justify-center items-center cursor-pointer' onClick={()=>HandleSpecilist(items.speciality)}>
+                              <img src={items.image} width={100} alt="" />
+                              <p className='text-xs mt-2'>{items.speciality}</p>
+                          </div>
+                        </Link>
                     </div>
                 ))
             }

@@ -9,7 +9,7 @@ const Card = ({docName, docSpecility, docImg}) => {
       </div>
 
       <div className="text_container h-[30%] bg-white rounded-br-lg rounded-bl-lg px-6 py-5 md:px-4 md:py-2">
-        <p className='text-green-500 flex items-center gap-2 text-base md:text-sm'><div className='w-2 h-2 rounded-full bg-green-500'></div>Available</p>
+        <p className='text-green-500 flex items-center gap-2 text-base md:text-sm'><span className='w-2 h-2 rounded-full bg-green-500'></span>Available</p>
         <p className='text-xl md:text-lg'>{docName}</p>
         <p className='text-base md:text-sm text-zinc-500'>{docSpecility}</p>
       </div>

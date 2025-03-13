@@ -15,10 +15,12 @@ const NavBar = () => {
 
             <div className="nav_container h-20 flex items-center justify-between border-b-2 border-zinc-200">
 
-                <div className="logo flex gap-2 items-center">
-                    <img src={Logo} alt="" width={30}/>
-                    <p className='text-2xl font-medium text-[#2F80ED]'>MedEase</p>
-                </div>
+                <Link to={"/"}>
+                    <div className="logo flex gap-2 items-center">
+                        <img src={Logo} alt="" width={30}/>
+                        <p className='text-2xl font-medium text-[#2F80ED]'>MedEase</p>  
+                    </div>
+                </Link>
 
                 <div className="nav_links text-[13px] font-medium antialiased flex gap-7 text-gray-700">
                     <Link className={location.pathname === '/' ? "active" : ""} to={'/'}>HOME</Link>
@@ -28,9 +30,11 @@ const NavBar = () => {
                 </div>
 
                 <div className="account_detail">
-                    <button className='bg-[#2F80ED] text-white px-6 py-2 rounded-full text-sm'>
-                        Create account
-                    </button>
+                    <Link to={"/Auth"}>
+                        <button className='bg-[#2F80ED] text-white px-6 py-2 rounded-full text-sm'>
+                            Create account
+                        </button>
+                    </Link>
                 </div>
 
             </div>
@@ -41,10 +45,12 @@ const NavBar = () => {
 
             <div className='flex h-full items-center justify-between border-b-2 border-zinc-200'>
 
-                <div className="logo flex gap-2 items-center">
-                    <img src={Logo} alt="" width={30}/>
-                    <p className='text-2xl font-medium text-[#2F80ED]'>MedEase</p>
-                </div>
+                <Link to={"/"}>
+                    <div className="logo flex gap-2 items-center">
+                        <img src={Logo} alt="" width={30}/>
+                        <p className='text-2xl font-medium text-[#2F80ED]'>MedEase</p>  
+                    </div>
+                </Link>
 
                 {
                     menuState === "close" ? 
@@ -70,12 +76,13 @@ const NavBar = () => {
                                 <Link className={location.pathname === '/Contact' ? "active2" : ""} to={'/Contact'}>CONTACT</Link>
                             </div>
 
-                            <div className="account_detail flex justify-center">
-                                <button className='bg-[#2F80ED] text-white px-6 py-2 rounded-full text-lg mt-20'>
-                                    Create account
-                                </button>
-                            </div>
-                
+                            <Link to={"/Auth"}>
+                                <div className="account_detail flex justify-center">
+                                    <button className='bg-[#2F80ED] text-white px-6 py-2 rounded-full text-lg mt-20'>
+                                        Create account
+                                    </button>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import { doctors } from "../assets/assets_frontend/assets.js"
 import Card from './Card.jsx'
+import { Link } from 'react-router-dom'
 
 const TopDoc = () => {
   return (
@@ -18,7 +19,7 @@ const TopDoc = () => {
 
             <div className="docContainer flex flex-wrap gap-4 mt-8 justify-center">
                 {
-                    doctors.map((items, index) => (
+                    doctors.slice(0,10).map((items, index) => (
                         <div key={index}>
                             <Card docName={items.name} docSpecility={items.speciality} docImg={items.image}/>
                         </div>
@@ -27,7 +28,9 @@ const TopDoc = () => {
             </div>
 
             <div className="btn flex justify-center">
-                <button className='px-10 py-3 text-zinc-600 bg-[#EAEFFF] mt-14 rounded-full'>more</button>
+                <Link to={"./AllDoc"}>
+                  <button className='px-10 py-3 text-zinc-600 bg-[#EAEFFF] mt-14 rounded-full'>more</button>
+                </Link>
             </div>
 
         </div>
