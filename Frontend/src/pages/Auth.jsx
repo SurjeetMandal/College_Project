@@ -58,7 +58,7 @@ const Auth = () => {
 
                             <button className='active2 w-full mt-4'>Login</button>
 
-                            <p className='text-sm text-zinc-600 mt-4'>Create an new account? <span className='text-blue-600 underline cursor-pointer' onClick={()=>setAuth("signin")}>Login here</span></p>
+                            <p className='text-sm text-zinc-600 mt-4'>Create an new account? <span className='text-blue-600 underline cursor-pointer' onClick={()=>setAuth("signin")}>Signin here</span></p>
                         </form>
                     </div>
                 </div>

@@ -45,3 +45,18 @@ body{
     margin-top: 6px;
     color: #4f525a;
 }
+
+.active3{
+    background-color: #F2F3FF;
+    border-right: 4px solid #2F80ED;
+}
+
+.relativWidth{
+    width: calc(100% - 200px);
+}
+
+@media screen and (max-width: 640px) {
+    .relativWidth{
+        width: calc(100% - 50px);
+    }
+}
