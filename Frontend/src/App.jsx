@@ -9,6 +9,7 @@ import Auth from './pages/Auth'
 import { DoctorProvider } from "./context/DoctorContext";
 import Admin from './pages/Admin'
 import Doctor from './pages/Doctor'
+import AdminDocAuth from './pages/AdminDocAuth'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path= "/Auth" element={<Auth />} />
         <Route path= "/Admin" element={<Admin />} />
         <Route path= "/Doctor" element={<Doctor />} />
+        <Route path= "/AdminDocAuth" element={<AdminDocAuth />} />
       </Routes>
     </DoctorProvider>
   )
